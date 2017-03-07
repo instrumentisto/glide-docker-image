@@ -20,6 +20,10 @@ indent_size = 4
 indent_style = tab
 indent_size = 4
 
-[{post_push,post_push.erb}]
+[{*.bats,post_push,post_push.erb}]
+indent_style = space
+indent_size = 2
+
+[*.{yml,yaml}]
 indent_style = space
 indent_size = 2
