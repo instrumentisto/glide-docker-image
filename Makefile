@@ -12,7 +12,7 @@
 
 
 IMAGE_NAME := instrumentisto/glide
-VERSION ?= 0.12.0-go1.7.3
+VERSION ?= 0.12.0-go1.7
 TAGS ?= 0.12.0-go1.7,0.12.0,0.12,latest
 
 no-cache ?= no
