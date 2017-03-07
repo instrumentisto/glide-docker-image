@@ -16,7 +16,7 @@ RUN apk add --update --no-cache \
 
  # Download and unpack Glide sources
  && curl -L -o /tmp/glide.tar.gz \
-          https://github.com/Masterminds/glide/archive/v0.12.0.tar.gz \
+          https://github.com/Masterminds/glide/archive/v0.12.1.tar.gz \
  && tar -xzf /tmp/glide.tar.gz -C /tmp \
  && mkdir -p $GOPATH/src/github.com/Masterminds \
  && mv /tmp/glide-* $GOPATH/src/github.com/Masterminds/glide \
