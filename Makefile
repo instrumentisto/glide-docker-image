@@ -12,10 +12,8 @@
 
 
 IMAGE_NAME := instrumentisto/glide
-VERSION ?= 0.12.3-go1.9
-TAGS ?= 0.12.3-go1.9,0.12.3,0.12,latest
-
-no-cache ?= no
+VERSION ?= 0.13.0-go1.9
+TAGS ?= 0.13.0-go1.9,0.13.0,0.13,latest
 
 
 comma := ,
@@ -31,7 +29,7 @@ eq = $(if $(or $(1),$(2)),$(and $(findstring $(1),$(2)),\
 # Usage:
 #	make image [no-cache=(yes|no)] [VERSION=]
 
-no-cache-arg = $(if $(call eq, $(no-cache), yes), --no-cache, $(empty))
+no-cache-arg = $(if $(call eq,$(no-cache),yes),--no-cache,)
 
 image:
 	docker build $(no-cache-arg) -t $(IMAGE_NAME):$(VERSION) .
@@ -43,7 +41,7 @@ image:
 # Usage:
 #	make tags [VERSION=] [TAGS=t1,t2,...]
 
-parsed-tags = $(subst $(comma), $(space), $(TAGS))
+parsed-tags = $(subst $(comma),$(space),$(TAGS))
 
 tags:
 	(set -e ; $(foreach tag, $(parsed-tags), \
