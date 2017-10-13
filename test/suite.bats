@@ -62,6 +62,17 @@
 }
 
 
+@test "SSH is installed" {
+  run docker run --rm --entrypoint sh $IMAGE -c 'which ssh'
+  [ "$status" -eq 0 ]
+}
+
+@test "SSH runs ok" {
+  run docker run --rm --entrypoint sh $IMAGE -c 'ssh -V'
+  [ "$status" -eq 0 ]
+}
+
+
 @test "Glide is installed" {
   run docker run --rm --entrypoint sh $IMAGE -c 'which glide'
   [ "$status" -eq 0 ]

@@ -41,10 +41,8 @@ image:
 # Usage:
 #	make tags [VERSION=] [TAGS=t1,t2,...]
 
-parsed-tags = $(subst $(comma),$(space),$(TAGS))
-
 tags:
-	(set -e ; $(foreach tag, $(parsed-tags), \
+	(set -e ; $(foreach tag, $(subst $(comma), ,$(TAGS)), \
 		docker tag $(IMAGE_NAME):$(VERSION) $(IMAGE_NAME):$(tag) ; \
 	))
 
@@ -56,7 +54,7 @@ tags:
 #	make push [TAGS=t1,t2,...]
 
 push:
-	(set -e ; $(foreach tag, $(parsed-tags), \
+	(set -e ; $(foreach tag, $(subst $(comma), ,$(TAGS)), \
 		docker push $(IMAGE_NAME):$(tag) ; \
 	))
 

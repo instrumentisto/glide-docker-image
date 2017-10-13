@@ -8,6 +8,7 @@ RUN apk add --update --no-cache \
         ca-certificates \
         # https://github.com/Masterminds/glide#supported-version-control-systems
         git mercurial subversion bzr \
+        openssh \
  && update-ca-certificates \
     \
  # Install build dependencies
@@ -29,7 +30,7 @@ RUN apk add --update --no-cache \
  && mkdir -p /usr/local/share/doc/glide \
  && cp LICENSE /usr/local/share/doc/glide/ \
     \
- # Clenup unnecessary files
+ # Cleanup unnecessary files
  && apk del .build-deps \
  && rm -rf /var/cache/apk/* \
            $GOPATH/src/* \
