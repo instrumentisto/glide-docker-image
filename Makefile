@@ -12,8 +12,8 @@
 
 
 IMAGE_NAME := instrumentisto/glide
-VERSION ?= 0.13.1-go1.9
-TAGS ?= 0.13.1-go1.9,0.13.0,0.13,latest
+VERSION ?= 0.13.1-go1.10
+TAGS ?= 0.13.1-go1.10,0.13.0,0.13,latest
 
 
 comma := ,

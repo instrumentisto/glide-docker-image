@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/golang
-FROM golang:1.9-alpine
+FROM golang:1.10-alpine
 
 MAINTAINER Instrumentisto Team <developer@instrumentisto.com>
 
