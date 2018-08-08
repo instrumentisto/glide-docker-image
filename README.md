@@ -6,6 +6,15 @@ Glide Docker Image
 
 
 
+## Status
+
+__PROJECT IS CLOSED AND ARCHIVED. NO MAINTAINING WILL BE CONTINUED.__
+
+Consider to use [Dep](https://hub.docker.com/r/instrumentisto/dep) instead.
+
+
+
+
 ## What is Glide?
 
 Glide is a tool for managing the `vendor` directory within a Go package. This feature, first introduced in Go 1.5, allows each package to have a `vendor` directory containing dependent packages for the project. These vendor packages can be installed by a tool (e.g. `glide`), similar to `go get` or they can be vendored and distributed with the package.
